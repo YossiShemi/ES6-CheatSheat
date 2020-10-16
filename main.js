@@ -161,11 +161,27 @@ console.log(city +' '+street);
 
 //Array methods
 let arr = [1,2,3,4,5,6,7,8,9,10];
+
 let arr2= arr.forEach(x=>x*2);
 console.log(arr2); // undefined
-let arr3= arr.map(x=>x%2===0);
-console.log(arr3); // 2 4 6 8 10 12 14 16 18 20
-console.log( arr.reduce((sum,value)=>sum+=value) );
+
+// Map-> return new array with the same size of original.
+// Can change x value or return answer to consition
+let arr3= arr.map(x=>x*2);
+console.log(arr3); //  2 4 6 8 10 12 14 16 18 20
+let arr31 = arr.map (x=>x%2==0);
+console.log(arr31); // F T F T F T F T F T
+
+// Filter -> return the x only if the condition is true
+let arr4 = arr.filter (x=>x%2===0);
+console.log(arr4); //2 4 6 8 10
+
+console.log( arr.reduce((sum,value)=>sum+=value) ); //55
+
+arr.sort((a,b)=> b-a);
+console.log(arr); // 10 9 8 7 6 5 4 3 2 1
+
+
 
 
 
