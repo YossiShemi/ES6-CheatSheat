@@ -17,10 +17,22 @@ function test(){
 
 
 
+
+
+
+
+
+
 // printing: backtick and ${}
 const name= "Yossi";
 console.log("Hello "+name); // Hello Yossi
 console.log(`Hello ${name}`); // Hello Yossi 
+
+
+
+
+
+
 
 
 
@@ -50,6 +62,12 @@ s1.details2();
 
 
 
+
+
+
+
+
+
 // String methods
 let theString = 'Hello, Yossi Shemi';
 console.log(theString.startsWith('Hello')); //true
@@ -61,11 +79,22 @@ console.log(theString.includes('Yo')); //true
 
 
 
+
+
+
+
+
+
 //Spread operator ...
 const numbers2 =[2,4,6];
 const numbers3=[3,6,9];
 const numbers= [...numbers2, ...numbers3];
 console.log(numbers); // 2,4,6,3,6,9
+
+
+
+
+
 
 
 
@@ -103,6 +132,11 @@ d(); //7
 
 
 
+
+
+
+
+
 //Destructuring assignment
 const x = [1, 2, 3, 4, 5];
 const [y, z] = x;
@@ -112,6 +146,32 @@ console.log(z); // 2
 const address={city:'Lod', street:'a', number:2};
 const {city,street}=address; // important to use same names !
 console.log(city +' '+street);
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Array methods
+let arr = [1,2,3,4,5,6,7,8,9,10];
+let arr2= arr.forEach(x=>x*2);
+console.log(arr2); // undefined
+let arr3= arr.map(x=>x%2===0);
+console.log(arr3); // 2 4 6 8 10 12 14 16 18 20
+console.log( arr.reduce((sum,value)=>sum+=value) );
+
+
+
+
+
+
 
 
 
@@ -179,7 +239,3 @@ getAllNumbers2()
 //       (err)=>{console.log(err);}
 //   );
   
-
-
-
-
